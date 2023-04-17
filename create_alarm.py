@@ -24,13 +24,13 @@ def create_message():
     date_diff = now - date_to_compare
     # print("일 수 차이 :", date_diff.days)
 
-    seats = [88, 75, 81]
+    seats = [81, 75, 88]
     members_idx = {'강준형': 0, '문다영': 1, '김보경': 2}
     msg = ':alarm_clock: 오늘 예약할 자리 :alarm_clock: \n'
     for name in members_idx.keys():
         seat_idx = (((date_diff.days) // 7) + members_idx[name]) % 3
         msg += f"{name}: {seats[seat_idx]} \n"
-        # print(f"{name} 의 자리: {seats[seat_idx]}")
+        #print(f"{name} 의 자리: {seats[seat_idx]}")
     return msg
 
 
